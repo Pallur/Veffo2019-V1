@@ -1,0 +1,20 @@
+{
+  "name": "v1-synilausn",
+  "version": "1.0.0",
+  "description": "v10",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint *.js **/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+  }
+}

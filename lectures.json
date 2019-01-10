@@ -1,0 +1,552 @@
+{
+  "lectures": [
+    {
+      "slug": "html-sagan",
+      "title": "Sagan",
+      "category": "html",
+      "image": "img/code.jpg",
+      "thumbnail": "img/thumb1.jpg",
+      "content": [
+        {
+          "type": "youtube",
+          "data": "https://www.youtube.com/embed/-dC37AYntUQ"
+        },
+        {
+          "type": "text",
+          "data": "Frá örófi alda höfum við sagt hvort öðru sögur. Í fyrstu geymdar í minni einstaklinga, seinna skrifaðar á skinn eða pappír, síðan prentaðar með prentvél Gutenbergs og núna fjölfaldaðar í prentsmiðjum.\nPrentaður texti er í eðli sínu fastur. Við höfum blaðsíður í ákveðinni stærð sem textinn er prentaður á og eftir það eru engar breytingar mögulegar. En hvað ef svo væri ekki?\nÁrið 1941 gaf Jorge Luis Borges út smásöguna „The Garden of Forking Paths” sem segir frá höfundi sem ætlar að skrifa stóra og flókna bók ásamt því að búa til stórt og flókið völundarhús. Síðar kemur í ljós að bókin og völundarhúsið er sami hluturinn en sagan lýsir heim þar sem allar mögulegar niðurstöður atburða eiga sér stað samtímis. Þessi smásaga er talin kynna fyrst hugmyndina um HyperText.\nVið lok seinna stríðs skrifaði Vennevar Bush greinina „As We May Think“ í Atlantic Monthly þar sem hann lýsir Memex. Memex er tæki sem leyfir einstakling að halda utan um sitt eigið safn af upplýsingum. Það leyfir flokkun, athugasemdir og tengingar við annað efni svo hægt sé að fletta upp og leita ásamt því að deila með öðrum á einfaldan hátt. Sannkallað töfratæki sem Bush gerði ráð fyrir að myndi gjörbreyta heiminum."
+        },
+        {
+          "type": "quote",
+          "data": "The future is already here — it's just not very evenly distributed.",
+          "attribute": "William Gibson"
+        },
+        {
+          "type": "text",
+          "data": "Í kringum 1990 var Sir Tim Berners-Lee að vinna hjá CERN sem eðlisfræðingur. Hann skrifaði minnisblað um kerfi sem hann sá fyrir sér að myndi auka möguleika á samvinnu með því að deila skjölum á einfaldan hátt. Í framhaldinu skilgreindi hann HTML, t.d. í skjalinu „HTML Tags“ og skrifaði fyrsta vafrann og vefþjóninn sem túlkuðu og birtu HTML (skrifaður í Objective-C á NeXT tölvu). Fyrsta vefsíðan var síðan aðgengileg 23. ágúst 1991, og er enn aðgengileg á sömu slóð í dag."
+        },
+        {
+          "type": "image",
+          "data": "img/server.jpg",
+          "caption": "NeXT tölvan sem Tim Berners-Lee notaði til að skrifa fyrsta vefþjóninn og vafrann. Á tölvu er skrifað „This machine is a server DO NOT POWER DOWN!!“"
+        },
+        {
+          "type": "heading",
+          "data": "Markup Language"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Lightweight – Einföld setningarfræði sem eykur læsileiki fyrir fólk",
+            "Presentational – WYSIWYG ritlar, markup falið fyrir notanda, t.d. Word",
+            "Procedural – markup innifalið í texta sem leiðbeiningar um aðgerðir á textann, t.d. LaTeX",
+            "Descriptive – markup gefur texta merkingu sem er óháður birtingu þess, t.d. HTML"
+          ]
+        },
+        {
+          "type": "code",
+          "data": "### Markdown fyrirsögn\n\nTexti sem inniheldur **feitletraðan** og\n_skáletraðan_ texta\nmeð [tengli](http://example.org).\n\n* Listi\n* af\n* orðum"
+        },
+        {
+          "type": "heading",
+          "data": "HTML5"
+        },
+        {
+          "type": "text",
+          "data": "Eftir áhugaleysi W3C á því að þróa HTML áfam og mikinn fókus á XHTML og XML tengda tækni tóku nokkrir aðilar sig saman og stofnuðu WHATWG (Web Hypertext Application Technology Working Group) árið 2004, með það að markmiði að vinna áfram að HTML og eðlilegri framþróun vefsins. Þessi vinna fór fram undir nafninu HTML5 þar sem hver sem er gat lagt til breytingar á HTML í gegnum póstlista en takmarkaður hópur ritstjóra stýrði því hvað fór inn í staðal.\nTveimur árum seinna, árið 2006, sá W3C að sér og hélt áfram þróun HTML sem HTML 5. En þar sem hver heilvita maður sér að þróun á tveim aðskildum stöðlum (HTML5 og HTML 5) á sama tíma virkar ekki, þá voru þeir blessunarlega sameinaðir í einn HTML5 staðal árið 2007. W3C hætti þróun á XHTML 2.0 árið 2009 og farið var að öllu að þróa HTML5 sem framtíð HTML.\nÁrið 2012 tók W3C „snapshot“ af staðlinum eins og hann leit út hjá WHATWG og fór í þá vinnu að gera staðalinn að W3C staðli. WHATWG hætti hinsvegar að tala sérstaklega um HTML5 og vinnur nú að framþróun HTML í lifandi staðli sem mun aldrei klárast og heldur áfram að þróast án þess að hlutir séu fjarlægðir\nHTML5 byggir hvorki á SGML né XML en er samhæft fyrri útgáfum (backwards compatible) af HTML. Stefnan er að auka samvirkni (interoperability) og aðgengi að vefnum. Til að vera að fullu samhæft fyrri útgáfum þarf HTML5 að skilgreina DocType:"
+        },
+        {
+          "type": "code",
+          "data": "<!doctype html>"
+        },
+        {
+          "type": "heading",
+          "data": "Minnsta HTML skjalið"
+        },
+        {
+          "type": "code",
+          "data": "<!doctype html>\n<html lang=\"is\">\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Halló heimur</title>\n  </head>\n  <body>\n    <p>Halló heimur</p>\n  </body>\n</html>"
+        }
+      ]
+    },
+    {
+      "slug": "html-element",
+      "title": "Element",
+      "category": "html",
+      "image": "img/code2.jpg",
+      "content": [
+        {
+          "type": "text",
+          "data": "HTML5 staðalinn skilgreinir element og skiptir þeim í hópa:"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Metadata – lýsigögn",
+            "Flow – flæði",
+            "Sectioning – kaflar og svæði",
+            "Heading – fyrirsagnir",
+            "Phrasing – orðalag",
+            "Embedded – innfellt",
+            "Interactive – gagnvirkt"
+          ]
+        },
+        {
+          "type": "text",
+          "data": "Þegar við skrifum HTML eru þetta elmentin sem við skoðum m.t.t. merkingarfræði áður en við grípum eitthvað almennt. Til að aðstoða við leit er gott að nota skilgreiningar W3C, HTML5 Element Index hjá HTML5 Doctor, MDN: HTML element reference eða W3C: The Elements of HTML."
+        },
+        {
+          "type": "heading",
+          "data": "Sectioning content"
+        },
+        {
+          "type": "code",
+          "data": "<body>\n  <header>\n    <nav></nav>\n  </header>\n  <main>\n    <section></section>\n  </main>\n  <footer></footer>\n</body>"
+        },
+        {
+          "type": "heading",
+          "data": "Headings"
+        },
+        {
+          "type": "text",
+          "data": "Fyrir þau svæði og kafla sem við skilgreinum er æskilegt að setja fyrirsagnir á hvert og eitt. Í HTML eru fyrirsagnir skilgreindar frá <h1> til <h6>, í minnkandi mikilvægisröð. Útfrá þessu er hægt að skilgreina útlínu fyrir vefinn okkar sem hægt væri að horfa á eins og t.d. efnisyfirlit.\n\nMerkingarfræðilega hefur <h1> mesta vægið og skilgreinir aðalumfjöllunarefni vefs og ætti aðeins að nota einu sinni. Þetta getur skipt máli fyrir lesvafra og vélar sem lesa vefina okkar.\n\nÞegar við byggum efni á vef ættum við að skilgreina fyrirsagnir í röð og passa að göt myndist ekki þar sem hoppað er yfir fyrirsögn, t.d. frá <h1> í <h3>."
+        },
+        {
+          "type": "heading",
+          "data": "Töflur"
+        },
+        {
+          "type": "code",
+          "data": "<table border=\"1\">\n  <caption>\n  <thead>\n    <tr>\n      <th scope=\"col\">Vara</th>\n      <th scope=\"col\">Lýsing</th>\n      <th scope=\"col\">Verð</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th scope=\"row\">Sími</th>\n      <td>Frábær sími!</td>\n      <td>150.000 kr.-</td>\n    </tr>\n    <tr>\n      <th scope=\"row\">Tölva</th>\n      <td>Geggjuð</td>\n      <td>100.000 kr.-</td>\n    </tr>\n  </tbody>\n  <tfoot>\n    <tr>\n      <td colspan=\"2\">Tveir hlutir</td>\n      <td><strong>250.000 kr.-</strong></td>\n    </tr>\n  </tfoot>\n</table>"
+        },
+        {
+          "type": "heading",
+          "data": "Vísað í efni"
+        },
+        {
+          "type": "text",
+          "data": "Þegar við vísum í efni þurfum við að gefa upp slóð. Þessar slóðir geta verið afstæðar (relative) eða nákvæmar (absolute). Oftast erum við að nota innfelld element þegar við vísum í slóðir en það á þó líka við t.d. <a href=\"...\"> og <link> þegar við vísum í CSS skrár.\n\nAfstæðar slóðir eða relative paths eru slóðir sem líta út frá því skjali sem vísað er frá. Ef við erum stödd í index.html skjali og vísað er á img/foo.jpg er gert ráð fyrir að img/ mappa sé til í sömu möppu og index.html er í.\n\nEf slóðin byrjar á / er byrjað á að fara „á rótina“ á viðkomandi vef og út frá því leitað að möppum og skjölum. T.d. ef við erum á https://hi.is/nam/tolvunarfraedi/ og vísum af þeirri síðu á /logo.png er leitað að myndinni á https://hi.is/logo.png en ef / er sleppt er leitað á https://hi.is/nam/tolvunarfraedi/logo.png.\n\nNákvæmar slóðir eru þær slóðir sem ekki eru afstæðar, þ.e.a.s. þær vísa nákvæmlega í það sem átt er við. Í stað þess að vísa í logo.png vísum við í https://hi.is/nam/tolvunarfraedi/logo.png. Kostur við þetta er að vita nákvæmlega við hvað er átt. Á móti kemur sá stóri ókostur að ef slóð breytist þarf að breyta öllum vísunum. Við það að breyta nam í nam-og-kennsla verða allar slóðir brotnar á meðan að hlutfallslegum slóðum er sama svo lengi sem möppur og skrár haldast þær sömu innbyrðis.\n\nTvö gildi er hægt að nota þegar verið er að fara á milli mappa en það eru . og ... Stakur punktur . vísar í þá möppu sem við erum í en .. vísar í foreldri.\n\nEf við gefum okkur eftirfarandi strúktúr keyrandi á léninu example.org:"
+        },
+        {
+          "type": "code",
+          "data": "verkefni/\n├── img/\n│   └── foo.jpg\n└── index.html"
+        },
+        {
+          "type": "text",
+          "data": "á eftirfarandi við ef við erum stödd á https://example.org/verkefni/index.html"
+        },
+        {
+          "type": "list",
+          "data": [
+            ". vísar í möppuna verkefni/",
+            ".. vísar í „rót“ example.org, þ.e.a.s. möppuna sem inniheldur verkefni/",
+            "./img/foo.jpg, img/foo.jpg, /verkefni/img/foo.jpg og ../verkefni/img/foo.jpg vísa öll á sama stað"
+          ]
+        },
+        {
+          "type": "text",
+          "data": "Margar af þessum reglum eiga bæði við um vefslóðir (URL) og skráakerfi stýrikerfa. Þó er munur þar á, t.d. nota vefslóðir, macOS og linux / til að skipta á milli mappa en í Windows er \\ notað."
+        },
+        {
+          "type": "heading",
+          "data": "Merkingarfræði"
+        },
+        {
+          "type": "text",
+          "data": "Merkingarfræðilegt HTML er þegar við nýtum skilgreinda merkingu þeirra elementa sem til eru í stað þess að nota element sem láta efnið okkar líta „rétt“ út. T.d. væri ekki æskilegt að nota <strong> til að láta texta líta út fyrir að vera fyrirsögn, við notum <h3> eða álíka.\n\nÞað er sterklega mælst til þess að markup í HTML skjali sé aðeins notað til að tjá merkingu en ekki framsetningu. Framsetningu á gögnum er stýrt með CSS og fáum við því hreina skiptingu á milli efnis og útlits. Mörg element eru til sem skilgreina merkingu en annars er hægt að nota attributes til að ljá þeim frekari merkingu.\n\nMeð því aðskilja á milli merkingar og útlits er auðveldara að breyta öðru án þess að hafa áhrif á hitt. Þetta getur einfaldað okkur viðhald og gert breytingar ódýrari en þær annars gætu verið. Merkingarfræði getur líka aukið aðgengi að vefnum okkar, bæði fyrir einstaklinga sem nota lesvafra eða álíka og einnig fyrir vélar sem heimsækja vefinn okkar. Þessar vélar skoða vefinn okkar og draga ályktanir um efnið út frá því hvaða element eru notuð. T.d. Googlebot, Pocket eða Instapaper. Vafrinn sem túlkar efnið gæti líka nýtt merkingarfræði okkar til að birta efnið á nytsamlegan hátt sem höfundi hefði ekki dottið í hug. Að lokum notum við merkingarfræðilegt HTML því það er snyrtilegra og faglegra.\n\n„Áður fyrr“ þegar við höfðum ekki HTML og CSS var merkingu og framsetningu blandað óhikað saman. Töflur ásamt ósýnilegum myndum (spacer gifs) voru notaðar til að stýra útliti, <FONT> elementið var eina leiðin til að stýra stærð og lit á letri, t.d. með <FONT size=\"12\" color=\"red\" face=\"Comic Sans MS\">Halló heimur!</FONT> sem gerði það að verkum að við fastsettum birtingu í merkingu skjals þegar hún ætti að vera óháð.\n\nÍ dag er búið að fjarlægja öll þau element sem breyttu útliti vefs, eins og <center> og <font>. Einnig er búið að fjarlægja attribute af sama meiði, t.d. align, background og bgcolor.\n\nÞegar við skrifum HTML, þá skrifum við þannig að það beri merkingu. Við stýrum framsetningu með CSS og reynum eins og við getum að viðhalda hreinni skiptingu milli efnis og útlits."
+        }
+      ]
+    },
+    {
+      "slug": "html-a11y",
+      "title": "Aðgengi",
+      "category": "html",
+      "image": "img/code2.jpg",
+      "thumbnail": "img/thumb2.jpg",
+      "content": [
+        {
+          "type": "youtube",
+          "data": "https://www.youtube.com/embed/jyxKJiKHdc0"
+        },
+        {
+          "type": "text",
+          "data": "Aðgengi og aðgengismál (accessibility eða a11y, 11 stafir milli fyrsta og seinasta) eru oft tengd við að fatlað fólk geti notað vefina okkar en það er frekar takmörkuð sýn á aðgengi. Aðgengi snýst um að fólk geti notað vefina okkar. Við getum öll orðið „fötluð“ tímabundið, hvort sem það er vegna slyss sem setur okkur í gips á annarri hönd eða þreytu sem veldur því að erfitt er að rýna í texta.\n\nSem fagaðilar ættum við auk þess ekki að mismuna fólki og það mun aðeins aukast að lög verði sett sem banna mismun, hvort sem hún er viljandi eða ekki eða að þessum lögum verði framfylgt með sektum. Því er það að segja „en fólk með fötlun mun ekki nota vefinn okkar“ lítið annað en afsökun fyrir því að huga ekki að virkni sem bætir vefinn fyrir alla."
+        },
+        {
+          "type": "quote",
+          "data": "P has Multiple Sclerosis, which affects both her vision and her ability to control a mouse. She often gets tingling in her hands that makes using a standard computer mouse for a long period of time painful and difficult",
+          "attribute": "An Alphabet of Accessibility Issues"
+        },
+        {
+          "type": "heading",
+          "data": "Að smíða vef með aðgengi í huga"
+        },
+        {
+          "type": "text",
+          "data": "Þegar við smíðum vef eru nokkur atriði sem við getum sérstaklega haft í huga og eru þau sett hér fram í engri sérstakri röð. Þetta er ekki tæmandi listi, heldur einföld ráð til að útbúa aðgengilegri vefi."
+        },
+        {
+          "type": "youtube",
+          "data": "https://www.youtube.com/embed/ox5QVbZSPBk"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Skilgreina lang attribute á <html> til að skilgreina á hvaða máli vefurinn er og er það notað t.d. af lesvöfrum til að velja tungumál.",
+            "Titill vefs, <title> er það fyrsta sem skjálesarar lesa og skal því vera lýsandi. Ekki ætti að nota sama titil á allar síður og ekki nota óljós eða of almenn orð. <title>Lærum vefforritun – forsíða</title> frekar en <title>Forsíða</title>.",
+            "Takmarka skal notkun á efni sem birtist aðeins þegar mús er haldið yfir (hover, sveimað) elementi, þar sem það felur almennt efni fyrir notendum, getur valdið rugling þegar smellt er og er ekki nothæft á snjalltækjum. Að láta hluti birtast þegar sveimað er yfir getur oft verið ódýr og fljótleg lausn þegar birta þarf mikið af upplýsingum, t.d. í valmynd, en það getur líka verið löt lausn.",
+            "Fyrir vídeó með töluðu máli getur verið mjög dýrmætt að bæta við texta. Fólk með slaka heyrn, fólk sem talar ekki málið eða þau sem ekki geta einhverra hluta vegna kveikt á hljóði græða öll. Hægt er að nýta <video> element með <track> elementi sem barni til að bæta við vtt skjali með texta. Þó að það sé ekki tæknilega flókið getur það verið afskaplega tímafrekt.",
+            "Skrifa ekki of flókinn texta, í of löngum línum eða með of smáu letri, þarsem texti er í eðli sínu það sem við notum til að miðla upplýsingum okkar. Því er mikilvægt að vanda frágang og birtingu hans.",
+            "Passa að nota ekki liti og litasamsetningar sem geta reynst erfiðar, þá bæði að litamótstaða (contrast) sé góð (hægt að nota tól einsog Color Contrast Checker) og að nota ekki litasamsetningar sem geta reynst litblindum erfiðar (Color Oracle er tól sem hermir eftir litblindu)",
+            "Skilgreina alt texta á myndir með <img alt=\"lýsandi texti fyrir mynd\"> og ef mynd er aðeins til skrauts, skilja eftir tómt. Alt textinn er birtur ef mynd nær ekki að hlaðast, eða lesinn af lesvöfrum í samhengi við efni. Forðast í lengstu lög að hafa myndir af texta. Skjálesarar taka fram þegar alt texti er lesinn svo það er óþarfi að byrja textan á „mynd af…“ eða álíka.",
+            "title atttibute er stundum ruglað saman við alt, og þá sérstaklega þegar óskað er eftir að fá tooltip, eða texta sem birtist þegar mús stoppar yfir elementi.",
+            "Nota fyrirsagnir rétt og í röð, frá <h1> til <h6> einsog farið var í að ofan.",
+            "Skrifa lýsandi texta þegar við búum til tengla, ekki smella hér. Oft á tíðum er texti tengils lesin sérstaklega í lesvöfrum og ætti því að innihalda eins mikið samræmi og hægt er. <p>Hægt er að eyða öllu með því að <a href=\"…\">smella hér.</a>.",
+            "Breyta sem minnst af grunnhegðun vafra"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "css-syntax",
+      "title": "Málfræði",
+      "category": "css",
+      "image": "img/code2.jpg",
+      "thumbnail": "img/thumb3.jpg",
+      "content": [
+        {
+          "type": "text",
+          "data": "CSS stendur fyrir Cascading Style Sheets og er style sheet language sem lýsir framsetningu á skjali skrifuðu í markup máli, t.d. HTML, XHTML, XML og SVG. CSS kom fyrst fram á sjónarsviðið árið 1994 þegar Håkon Wium Lie lagði til Cascading HTML style sheets. Í tillögunni er farið yfir hvernig vafrinn stjórni að mestu allri birtingu og „the author of HTML documents has no influence over the presentation“, sem var vissulega rétt, fyrir tíma CSS var engin leið til að breyta litum á tenglum!"
+        },
+        {
+          "type": "image",
+          "data": "img/strik.jpg",
+          "caption": "strik.is hannaður með töflum maí 2000, fyrsti vefurinn til að hljóta hin íslensku vefverðlaun."
+        },
+        {
+          "type": "text",
+          "data": "Árið 1996 var CSS 1 staðlað hjá W3C en átti erfitt uppdráttar fyrstu árin eftir það. Stuðningur í vöfrum var ekki mikill og þegar virkni var útfærð var hún oftar en ekki ósamhæfð milli vafra. CSS 2 staðallinn kom út 1998 og kynnti til leiks position eigindið sem leyfði enn frekari stjórn yfir útliti. Stuðningur við CSS hélt þó áfram að vera lítill og ósamhæfður í vöfrum. Vefforritarar létu sér nægja að nota töflur og sáu sumir hverjir ekki ástæðu til að tileinka sér nýja tækni sem ekki var vel studd. Web Standards Project (WaSP) fór gagngert að þrýsta á vafraframleiðendur til að útfæra CSS rétt samkvæmt staðli og var stofnuð til þess „CSS Action Committee“ sem einnig gekk undir nafninu „The CSS Samurai“. Partur af því sem þessi hópur gerði var að útbúa viðmiðs útfærslu af CSS sem vafrar gátu hlaðið upp og borið saman við mynd. Þetta próf var kallað acid test og varð til þess að stuðningur fór hægt og rólega að aukast."
+        },
+        {
+          "type": "image",
+          "data": "img/acid.png",
+          "caption": "Upprunalega acid prófið."
+        },
+        {
+          "type": "heading",
+          "data": "Einfalt, ekki auðvelt"
+        },
+        {
+          "type": "quote",
+          "data": "“You don't need to be a programmer or a CS major to understand the CSS specifications. You don't need to be over 18 or have a Bachelor's degree. You just need to be very pedantic, very persistent, and very thorough.”",
+          "attribute": "Understanding the CSS Specifications"
+        },
+        {
+          "type": "text",
+          "data": "Það er líka gott að hafa í huga að þó að CSS sé einfalt er það mjög kröftugt. Flest þau útlit sem við sjáum á vefnum eru smíðuð með CSS (stundum eru myndir eða þrívíddarvirkni notuð til að smíða útlit óháð CSS). Með mikilli þolinmæði má smíða ótrúlega hluti með CSS."
+        },
+        {
+          "type": "heading",
+          "data": "Málfræði"
+        },
+        {
+          "type": "text",
+          "data": "Málfræði CSS er einföld, flest það sem við gerum byggist á því að vinna með reglusett sem samanstendur af selectors og skilgreiningum:"
+        },
+        {
+          "type": "code",
+          "data": "p {\n  color: green;\n  margin: 1em;\n}"
+        },
+        {
+          "type": "heading",
+          "data": "Selectors"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Type selector, heiti á elementi, t.d. p",
+            "Universal selector, öll element, skilgreindur með *",
+            "Attribute selector, velur element eftir því hvaða attribute eru á því og hvað þau innihalda",
+            "Class selector, velur element eftir því hvað class attribute inniheldur, notar . (punkt)",
+            "ID selector, velur element eftir því hvað id attribute inniheldur",
+            "Gervi-klasar (pseudo-classes), velur hluti sem ekki er hægt að velja með hinum, einföldu selectorum, notum :. "
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "css-box",
+      "title": "Box model",
+      "category": "css",
+      "image": "img/code2.jpg",
+      "thumbnail": "img/thumb4.jpg",
+      "content": [
+        {
+          "type": "text",
+          "data": "Box módelið lýsir því hvernig rétthyrnd box fyrir element eru mynduð."
+        },
+        {
+          "type": "image",
+          "data": "img/box.png",
+          "caption": "Útskýringar mynd af box modelinu."
+        },
+        {
+          "type": "text",
+          "data": "Margin er ysta lag boxsins og getum við skilgreint lengd í hverja átt með margin-top, margin-right, margin-bottom og margin-left. Lengd getur verið skilgreind sem neikvæð tala en þá er box dregið í viðkomandi átt um töluna. Litur á boxi er ekki settur á margin svæði box.\nBorder er næst ystalag boxins og teiknar jaðar utan um það. Fyrir hverja átt er hægt að skilgreina hvert gildi, t.d. border-top-width. Eða notað border shorthand sem skilgreinir allt fyrir allar hliðar eða per hlið með t.d. border-top.\npadding er næst innsta lag boxsins en það er skilgreint einsog margin en getur ekki fengið neikvætt gildi. Fær bakgrunnslit sem skilgreindur er á elementi. padding hefur eins shorthand og margin."
+        },
+        {
+          "type": "youtube",
+          "data": "https://www.youtube.com/embed/cg__fxt8Cfw"
+        }
+      ]
+    },
+    {
+      "slug": "css-flexbox",
+      "title": "Flexbox",
+      "category": "css",
+      "thumbnail": "img/thumb5.jpg",
+      "content": [
+        {
+          "type": "youtube",
+          "data": "https://www.youtube.com/embed/-tyW_8dwpq8"
+        }
+      ]
+    },
+    {
+      "slug": "css-responsive",
+      "title": "Skalanleg vefhönnun",
+      "category": "css",
+      "thumbnail": "img/thumb6.jpg",
+      "content": [
+        {
+          "type": "quote",
+          "data": "The web’s greatest strength, I believe, is often seen as a limitation, as a defect. It is the nature of the web to be flexible, and it should be our role as designers and developers to embrace this flexibility, and produce pages which, by being flexible, are accessible to all.",
+          "attribute": "John Allsopp: A Dao of Web Design í A List Apart árið 2000"
+        },
+        {
+          "type": "image",
+          "data": "img/this-is-not-web.png",
+          "caption": "Vefurinn er ekki ein föst skjástærð."
+        },
+        {
+          "type": "image",
+          "data": "img/this-is-the-web.png",
+          "caption": "Vefurinn er margar skjástærðir á mörgum tækjum."
+        },
+        {
+          "type": "image",
+          "data": "img/this-will-bethe-web.png",
+          "caption": "Vefurinn mun aðeins halda áfram að verða flóknari."
+        },
+        {
+          "type": "text",
+          "data": "Fyrir tíma snjallsíma (fyrir árið 2007) voru vefir langflestir forritaðir fyrir fastar skjástærðir. Þær stærðir sem voru vinsælastar á hverjum tíma voru þær sem flestir notendur höfðu á sínum skjáum. Í fyrstu 640×480 skjáir (640 pixel breiða og 480 pixel háa), síðan 800×600 og að lokum aðallega fyrir 1024×768 skjái. Þegar komið var að 1024×768 upplausn myndaðist samstaða um að nota 960px hönnun sem algildan grunn, þar sem sú tala deilist þægilega. Þegar snjallsímar komu fyrst á markað og fólk fór að skoða vefi hannaða fyrir 960px í töluvert minni skjám var lausnin yfirleitt sú að hanna sérstaka „mobile“ vefi sem aðeins voru ætlaðir fyrir minni skjái, þá yfirleitt á m lénum, t.d. m.example.org.\n\nÁrið 2010 skrifaði Ethan Marcotte greinina „Responsive Web Design“ í A List Apart þar sem hann kynnir aðferð til að hanna og byggja vefi sem ekki voru fastir í þessum viðjum heldur sköluðu upp og niður með tækjunum sem þeir birtust í. Þessari grein fylgdi hann svo eftir með bók með sama nafni árið 2011.\n\nSkalanleg vefhönnun byggir á þremur atriðum, í mikilvægis röð:"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Sveigjanlegu umbroti, byggðu á grind",
+            "Sveigjanlegum myndum og miðlum",
+            "CSS media queries"
+          ]
+        },
+        {
+          "type": "heading",
+          "data": "Sveigjanleg grind"
+        },
+        {
+          "type": "text",
+          "data": "Þegar við vinnum með sveigjanlega grind megum við ekki skilgreina neinar breiddir í nákvæmum stærðum, við verðum að nota hlutfallslegar. Með því að notafæra okkur formúluna target ÷ context = result getum við breytt úr nákvæmu gildi í hlutfallsegt fyrir breiddir, margin, padding og letur. T.d. erum við með 1200px umgjörð og innan hennar erum við með efnissvæði sem á að vera 600px. Þá getum við sett umgjörðina með max-width: 1200px; og efnissvæðið með 600px ÷ 1200px = 0.5 eða width: 50%;.\n\nMeð sveigjanlegri grind festum við ekki stærð hennar í ákveðnum pixlum. Við skilgreinum fjölda dálka (oft eru 12 dálkar notaðir), bil á milli þeirra (kallað gutter) og hámarksstærð svæðis. Síðan reiknum við stærð hvers dálks sem 100% / <fjöldi dálka>. Innan grindarinn búum við síðan til raðar og dálka sem passa í grindina og staðsetjum efnið okkar í þeim. Fyrir hverja röð viljum við almennt ekki hafa samtölu dálka hærri en fjölda dálka.\n\nÞað er ekki krafa að byrja hvern dálk nákvæmlega í fyrsta. Með því að nota margin getum við fært dálka innan grindar svo lengi sem gildin eru hlutfallsleg, t.d. byrjað í miðju með margin-left: 50%;."
+        },
+        {
+          "type": "image",
+          "data": "img/02_Relative-Units-vs-Static-Units-1.gif",
+          "caption": "Hreyfimynd sem sýnir mun á max-width og ekki."
+        },
+        {
+          "type": "heading",
+          "data": "Sveigjanlegar myndir og miðlar"
+        },
+        {
+          "type": "text",
+          "data": "Þegar við erum að útfæra vefi sem eiga að birtast í mörgum mismunandi skjástærðum getum við ekki sett inn myndir og miðla sem eru af fastri stærð. Mynd sem er 1200px breið og á að birtast í dálk sem búið er að skala niður í 600px mun ekki birtast snyrtilega nema við gerum ráðstafanir. Við getum fest breidd mynda og miðla við breidd foreldris og látið skalast og þurfum þá aðeins að skilgreina max-width: 100%; en þá mun efnið alltaf fylla upp í breiddina. Við getum átt við hvernig efnið birtist með því að skera (crop) myndina til, object-fit getur hjálpað okkur við að skilgreina hvernig myndin er skorin eða sköluð og þá stundum í samhengi við height og overflow: hidden;"
+        },
+        {
+          "type": "heading",
+          "data": "Media queries"
+        },
+        {
+          "type": "text",
+          "data": "Með media queries getum við skilgreint „brotpunkta“ í hönnun þar sem við breytum á einhvern hátt hvernig layout á vef hagar sér. Við miðum við heildar breidd á viewport og getum skilgreint CSS sem keyra upp að ákveðinni breidd, frá ákveðinni breidd, blandað þessu saman til að skilgreina á bili, skilgreint eins fyrir hæð og, fleira. Sjá nánar í MDN: Using media queries.\n\nVið getum (og ættum) að beita progressive enhancement þegar við notum media queries. Það þýðir að grunnstílar ættu að skilgreina hvernig hlutur lítur út þegar hann fyllir alveg út í pláss sitt – er í minnstri upplausn, t.d. í snjallsíma. Eftir því sem hlutur fær meira pláss skilgreinum við media queries sem breyta hegðun með auknu plássi."
+        },
+        {
+          "type": "youtube",
+          "data": "https://www.youtube.com/embed/2RHbdRjtU9w"
+        }
+      ]
+    },
+    {
+      "slug": "js-basic",
+      "title": "Gildi, týpur og virkjar",
+      "image": "img/code2.jpg",
+      "category": "javascript",
+      "content": [
+        {
+          "type": "quote",
+          "data": "JavaScript er túlkað skriftumál, byggt á prótótýpum með dýnamískar, veikar týpur, fyrsta flokks föll og stuðning við hlutbunda-, gildinga- og fallaforritun"
+        },
+        {
+          "type": "text",
+          "data": "Þróað af Brendon Eich hjá Netscape kringum 1995 sem Mocha og LiveScript en nefnt JavaScript að lokum. Á tíu dögum! Staðlað hjá ECMA, sem ECMAScript árið 1997. Fyrstu útgáfur ekki svo góðar og fékk á sig óorð sem scripting mál sem bara amatörar notuðu. Þroskaðist og var útfært í öllum vöfrum. Í dag „forritunarmál vefsins“. Flestar, ef ekki allar, tölvur í dag innihalda a.m.k. einn JavaScript túlk."
+        },
+        {
+          "type": "quote",
+          "data": "If you want to write imperative code that runs in a web browser, you only have one choice: JavaScript.",
+          "attribute": "Resilient Web Design, chapter 4: Languages"
+        },
+        {
+          "type": "heading",
+          "data": "ECMAScript"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Fyrstu útgáfur, 1. og 2., 1997 og 1998",
+            "3. útgáfa 1999, bætti við regular expressions, betri strengjameðhöndlun, nýjum stýrisetningum o.fl.",
+            "4. útgáfa varð aldrei neitt",
+            "5. útgáfa 2009, skýrði óskýr atriði og bætti við einhverri virkni í málið",
+            "ECMAScript 6, (ECMAScript 2015) kom út í júní 2015 og innhélt marga nýja fítusa"
+          ]
+        },
+        {
+          "type": "quote",
+          "data": "JavaScript borrows most of its syntax from Java, but also inherits from Awk and Perl, with some indirect influence from Self in its object prototype system.",
+          "attribute": "JavaScript 1.1 specification"
+        },
+        {
+          "type": "text",
+          "data": "Breytur í JavaScript hafa ekki týpu, gildi hafa týpu: number, string, boolean, undefined, function eða object"
+        },
+        {
+          "type": "code",
+          "data": "let foo;\n// foo er skilgreind breyta með engu gildi — undefined\nconsole.log(typeof foo); // undefined\n\n// ef við myndum keyra línu að neðan myndum við fá SyntaxError\n// og forritið okkar myndi hætta keyrslu\n// let foo = 'bar';\n\nconst foo2 = 'bar';\n\n// breytur í JavaScript eru dýnamískar\nlet a = 'halló heimur';\n\nconsole.log(a); // \"halló heimur\"\n\na = 1;\n\nconsole.log(a); // 1\n\na = false;\n\nconsole.log(a); // false\n\na = undefined;\n\nconsole.log(a); // undefined\n\nconst FOO = 1;\n\n// ef við myndum keyra línu að neðan myndum við fá TypeError\n// og forritið okkar myndi hætta keyrslu\n// FOO = 2;\n\n// getum nefnt breytur með $, _ og íslenskum stöfum\n// en megum ekki byrja á tölustaf\n\nconst jó$$$ = '😎';\n\n// ef við myndum keyra línur að neðan myndum við fá SyntaxError\n// og forritið okkar myndi hætta keyrslu\n// let foo#% = 1;\n// let 1bar = 2;\n// let class = 'foo';\n\n// window inniheldur umhverfið í vafra en process í node.js\nconsole.log(window);\n\n// hlutir sem eru almennt aðgengilegir eru bundnir við window\nconsole.log(window.parseInt === parseInt); // true\n"
+        }
+      ]
+    },
+    {
+      "slug": "js-programs",
+      "title": "Forrit",
+      "category": "javascript",
+      "thumbnail": "img/thumb7.jpg",
+      "content": [
+        {
+          "type": "youtube",
+          "data": "https://www.youtube.com/embed/VSOQrRXyg28"
+        }
+      ]
+    },
+    {
+      "slug": "js-functions",
+      "title": "Föll",
+      "category": "javascript",
+      "image": "img/code.jpg",
+      "thumbnail": "img/thumb8.jpg",
+      "content": [
+        {
+          "type": "youtube",
+          "data": "https://www.youtube.com/embed/zqPVndkKuoE"
+        },
+        {
+          "type": "code",
+          "data": "function makeAdder(x) {\n  // þetta fall hefur alltaf aðgang að x\n  return y => x + y;\n}\n\nfunction outer(a) {\n  const x = 1;\n  function inner(b) {\n    const y = 2;\n    function innerinner(c) {\n      const z = 3;\n      return x + y + z + c;\n    }\n    return innerinner(b);\n  }\n  return inner(a);\n}\nouter(10); // 16\n"
+        }
+      ]
+    },
+    {
+      "slug": "js-array",
+      "title": "Array & objects",
+      "category": "javascript",
+      "image": "img/code.jpg",
+      "thumbnail": "img/thumb9.jpg",
+      "content": [
+        {
+          "type": "heading",
+          "data": "Array"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Fylki leyfa okkur að safna hlutum í raðaða lista",
+            "Búum til array með []",
+            "Nálgumst gildi innan fylkis með bracket notation",
+            "length skilar fjölda staka í fylki, frá 0 til stærsta index"
+          ]
+        },
+        {
+          "type": "code",
+          "data": "const list = [1, 2, 3];\n\nconsole.log(list.length); // 3\n\n// má þó að við höfum skilgreint sem const\nlist[100] = 1;\nconsole.log(list.length); // 101\n\n// Þar sem við skilgreinum list með const mun eftirfarandi kasta villu\n// list = ''; // TypeError\n\nconst a = 'hello world';\nconsole.log(a.length); // 11\nconsole.log(a['length']); // 11\nconsole.log(a['1%-foo']); // undefined\n\n// Óleyfilegt nafn, mun kasta villu\n// console.log(a.1%-foo); // SyntaxError\n\nconsole.log(a.toUpperCase()); // \"HELLO WORLD\"\n\nconst foo = [0, 1, 2];\nconsole.log(foo[0]); // 0\n\nconsole.log(foo.push('foo')); // 4\n\nconsole.log(foo.join(', ')); // '0, 1, 2, foo'\n\nconsole.log(foo.pop()); // 'foo'\n"
+        },
+        {
+          "type": "heading",
+          "data": "Object"
+        },
+        {
+          "type": "list",
+          "data": [
+            "Byrjum á að hugsa um object í JavaScript sem geymslu fyrir gildi þar sem gildi á sér nafn",
+            "Skilgreinum með `{}`, innan þess skilgreinum við eigindi hluts með heiti: gildi",
+            "Eigindi eru oftast skilgreind eitt per línu til að auka lesanleika",
+            "Ef við biðjum um eigindi sem ekki er skilgreint á hlut fáum við undefined"
+          ]
+        },
+        {
+          "type": "code",
+          "data": "const person = {\n  name: 'Jón Jónsson',\n\n  // óleyfilegt breytunafn án '\n  'home-address': 'Aðalgata 1',\n  age: 100,\n  registered: true,\n\n  // trailing comma\n  interests: [\n    'foo',\n    'bar',\n    'baz',\n  ],\n};\n\n\nconst a = {};\nconst key = 'bar';\n\na[key] = 'baz';\n\nconsole.log(a[key]); // baz\n\nconsole.log(a.bar); // baz\n\n\nconst obj = { foo: 1 };\nconsole.log(obj.foo); // 1\nconsole.log('foo' in obj); // true\n\nobj.bar = 'foo'; // \"foo\"\nobj['foo-bar'] = true; // true\nconsole.log(delete obj.foo); // true\n\nconsole.log('foo' in obj); // false\nconsole.log(obj); // { bar: \"foo\", foo-bar: true}\n\n\nconst foo = { x: 1, y: 2, z: 3 };\nconsole.log(Object.keys(foo)); // ['x', 'y', 'z']\nconsole.log(Object.values(foo)); // [1, 2, 3]\n\nObject.freeze(foo);\nconsole.log(delete foo.x); // false\n\n// afritum foo yfir í bar\nconst bar = Object.assign({}, foo);\n\nconst baz = { a: true, x: 9 };\n\n// afritum foo yfir í baz, yfirskrifar\nObject.assign(baz, foo);\n\nconsole.log(baz); // { a: true, x: 1, y: 2, z: 3  };\n"
+        },
+        {
+          "type": "youtube",
+          "data": "https://www.youtube.com/embed/RMiKD3vYKD0"
+        }
+      ]
+    },
+    {
+      "slug": "js-dom",
+      "title": "DOM & vafrinn",
+      "category": "javascript",
+      "content": [
+        {
+          "type": "youtube",
+          "data": "https://www.youtube.com/embed/wVCUH4vvVTc"
+        },
+        {
+          "type": "text",
+          "data": "Document Object Model leyfir forritum og skriptum að gera dýnamískar breytingar á efni, skipulagi og útliti skjala (oftast HTML eða XML) gegnum API. Hlutlaust á platform og mál og staðlað af W3C."
+        },
+        {
+          "type": "code",
+          "data": "<!doctype html>\n<html>\n  <head>\n    <title>My home page</title>\n  </head>\n  <body>\n    <h1>My home page</h1>\n    <p>Hello, I am Marijn and this is my home page.</p>\n    <p>I also wrote a book! Read it\n      <a href=\"http://eloquentjavascript.net\">here</a>.\n    </p>\n  </body>\n</html>"
+        },
+        {
+          "type": "image",
+          "data": "img/html-boxes.svg"
+        },
+        {
+          "type": "code",
+          "data": "<!doctype html>\n<html lang=\"is\">\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Búa til element</title>\n  </head>\n\n  <body>\n    <!-- hér er ekkert! -->\n\n    <script>\n    const form = document.createElement('form');\n    form.setAttribute('action', '/');\n    form.setAttribute('method', 'get');\n\n    const label = document.createElement('label');\n    label.setAttribute('for', 'searchField');\n    label.appendChild(document.createTextNode('Leita:'));\n\n    const input = document.createElement('input');\n    input.setAttribute('type', 'text');\n    input.setAttribute('id', 'searchField');\n    input.setAttribute('required', true);\n\n    const button = document.createElement('button');\n    button.appendChild(document.createTextNode('Leita'));\n\n    form.appendChild(label);\n    form.appendChild(input);\n    form.appendChild(button);\n\n    document.body.appendChild(form);\n    </script>\n  </body>\n</html>\n"
+        }
+      ]
+    },
+    {
+      "slug": "js-example",
+      "title": "Dæmi",
+      "category": "javascript",
+      "image": "img/code2.jpg",
+      "thumbnail": "img/thumb10.jpg",
+      "content": [
+        {
+          "type": "youtube",
+          "data": "https://www.youtube.com/embed/3FrbQcf1T3s"
+        }
+      ]
+    }
+  ]
+}
