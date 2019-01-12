@@ -4,6 +4,8 @@ Verkefni 1 snýst um að útfæra bakenda sem birtir gögn fyrir „prótótýpu
 
 Útfæra skal Express vefþjón sem birtir yfirlit yfir fyrirlestra úr möppu á disk og möguleika á að skoða hvern fyrirlestur.
 
+[Kynning á verkefni](https://youtu.be/ADmCKJJOzuk).
+
 ## Fyrirlestrar
 
 Fylgja skal [útliti sem gefið er í hópverkefni 2](https://github.com/vefforritun/vef1-2018-h2-synilausn/tree/master/utlit), leyfilegt er að afrita CSS sem búið er til útfrá Sass í sýnilausn af verkefni. Keyra þarf upp verkefnið til að nálgast `dist/styles.css` sem verður til þegar `npm run sass` er keyrt. Til að útlit virki þarf að fylgja því HTML sem búið er til fyrir framenda í [`src/lib/list.js`](https://github.com/vefforritun/vef1-2018-h2-synilausn/blob/master/src/lib/list.js) og [`src/lib`](https://github.com/vefforritun/vef1-2018-h2-synilausn/blob/master/src/lib/lecture.js). Gott getur verið að keyra upp verkefni og skoða með DevTools.
