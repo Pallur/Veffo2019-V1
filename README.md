@@ -16,7 +16,7 @@ Titill skal vera „Fyrirlestrar“ fyrir forsíðu en titill fyrirlesturs fyrir
 
 Fyrir hvern fyrirlestur þarf að birta efni úr `content` fylki fyrirlesturs. Hægt er skrifa virkni frá grunni eða nýta þá [virkni sem gefin er í sýnilausn af hópverkefni 2](https://github.com/vefforritun/vef1-2018-h2-synilausn/blob/master/src/lib/item.js). Ef sú virkni er notuð er mælt með að sækja [`jsdom`](https://github.com/jsdom/jsdom) sem leyfir okkur að nota HTML staðla _á bakenda_, þ.e.a.s., fá aðgang að `window` og `document` og geta þannig búið til HTML ótengt vafra. Til að fá HTML niðurstöðu eftir að búið er að tengja `jsdom`, þarf að kalla í `outerHTML()` fall á nóðu sem skila á. Gott er að útbúa fall sem tekur inn fylki af efni (`content`) og skilar streng sem er HTML, sjá `app.js`. Hægt er að endurnýta kóða að öllu leiti, aðeins þarf að breyta því hvernig módúll er notaður (eða nota `--experimental-modules`) og hvernig kóði fær `document` (þá frá `jsdom`, ekki global breyta frá vafra).
 
-[Sýnidæmi um notkun á `jsdom` með node](examples/jsdom).
+[Sýnidæmi um notkun á `jsdom` með node](examples/).
 
 ## Útfærsla
 
