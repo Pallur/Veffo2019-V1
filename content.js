@@ -1,41 +1,13 @@
 const jsdom = require('jsdom');
+
 const { JSDOM } = jsdom;
 const { document } = (new JSDOM()).window;
-
-function createHtml() {
-  const wrapper = document.createElement('div');
-
-  // jsdom útfærir DOM staðal
-  wrapper.classList.add('reciepe');
-  wrapper.dataset.foo = 'bar';
-
-  const ul = document.createElement('ol');
-
-  const steps = [
-    'Blanda saman vatni, brauði, salti og geri',
-    'Hnoða',
-    'Lyfta',
-    'Baka',
-    'Borða'
-  ];
-
-  steps.forEach((step) => {
-    const li = document.createElement('li');
-    li.appendChild(document.createTextNode(step));
-    ul.appendChild(li);
-  });
-
-  wrapper.appendChild(ul);
-
-  return wrapper;
-
-}
 
 function el(name, ...children) {
   const element = document.createElement(name);
 
   if (Array.isArray(children)) {
-    for (let child of children) { 
+    for (let child of children) { /* eslint-disable-line */
       if (typeof child === 'string') {
         element.appendChild(document.createTextNode(child));
       } else if (child) {
@@ -47,15 +19,49 @@ function el(name, ...children) {
   return element;
 }
 
-const html = createHtml();
+module.exports = {
+ createContent(content) {
+  const col = el('div');
+  col.classList.add('lecture__col');
+  const row = el('div', col);
+  row.classList.add('lecture__row');
+  const wrapper = el('div', row);
+  wrapper.classList.add('lecture__content');
 
-// Skilar DOM hlut frá jsdom
-console.log(html);
+  content.forEach((i) => {
+    let item;
+    switch (i.type) {
+      case 'youtube':
+        item = youtube(i.data);
+        break;
+      case 'text':
+        item = text(i.data);
+        break;
+      case 'list':
+        item = list(i.data);
+        break;
+      case 'heading':
+        item = heading(i.data);
+        break;
+      case 'code':
+        item = code(i.data);
+        break;
+      case 'quote':
+        item = quote(i.data, i.attribute);
+        break;
+      case 'image':
+        item = image(i.data, i.caption);
+        break;
+      default:
+        item = el('div', i.type);
+    }
 
-// Fáum HTML úr DOM hlut
-console.log(html.outerHTML);
+    col.appendChild(item);
+  });
 
-//import { el } from './helpers';
+  return wrapper.outerHTML;
+  },
+};
 
 function item(type, ...data) {
   const content = el('div', ...data);
@@ -67,7 +73,7 @@ function item(type, ...data) {
   return wrapper;
 }
 
- function text(data) {
+function text(data) {
   const split = data.split('\n');
 
   const texts = split.map((t) => {
@@ -79,7 +85,7 @@ function item(type, ...data) {
   return item('text', ...texts);
 }
 
- function quote(data, attribute) {
+function quote(data, attribute) {
   const quoteText = el('p', data);
   quoteText.classList.add('item__quote');
 
@@ -91,14 +97,14 @@ function item(type, ...data) {
   return item('blockquote', blockquote);
 }
 
- function heading(data) {
+function heading(data) {
   const element = el('h3', data);
   element.classList.add('item__heading');
 
   return item('heading', element);
 }
 
- function list(data) {
+function list(data) {
   const items = data.map((i) => {
     const li = el('li', i);
     li.classList.add('item__li');
@@ -111,14 +117,14 @@ function item(type, ...data) {
   return item('list', ul);
 }
 
- function code(data) {
+function code(data) {
   const element = el('pre', data);
   element.classList.add('item__code');
 
   return item('code', element);
 }
 
- function youtube(url) {
+function youtube(url) {
   const iframe = el('iframe');
   iframe.classList.add('item__iframe');
   iframe.setAttribute('src', url);
@@ -128,7 +134,7 @@ function item(type, ...data) {
   return item('youtube', iframe);
 }
 
- function image(data, caption) {
+function image(data, caption) {
   const imageElement = el('img');
   imageElement.classList.add('image__img');
   imageElement.setAttribute('alt', caption);
@@ -141,5 +147,3 @@ function item(type, ...data) {
 
   return item('image', blockquote);
 }
-
-

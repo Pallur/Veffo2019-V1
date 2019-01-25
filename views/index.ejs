@@ -1,0 +1,38 @@
+<%- include('header') -%>
+<body>
+    <header class="heading heading--main">
+        <span class="heading__category">Vefforritun</span>
+        <h1 class="heading__title">Fyrirlestrar</h1>
+    </header>
+        <main>
+            <ul class="filters">
+                <li>
+                    <button class="filters__filter filters__filter--html">HTML</button>
+                </li>
+                <li>
+                    <button class="filters__filter filters__filter--css">CSS</button>
+                </li>
+                <li>
+                    <button class="filters__filter filters__filter--js">JavaScript</button>
+                </li>
+            </ul>
+            <div class="list">
+                <div class="list__row">
+                        <% lectures.forEach((slug) => { %>
+                            <div class="list__col">
+                                <a class="listItem" href=<%= slug.slug%>>
+                                    <div class="listItem__image"> 
+                                        <img src=<%= slug.thumbnail %> >
+                                    </div>
+                                    <div class="listItem__bottom">
+                                        <div class="listItem__texts">
+                                            <span class="listItem__category"><%= slug.category %></span>
+                                            <h2 class=listItem__title><%= slug.title %></h2>    
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                          <% }); %>
+                </div>
+            </div>
+        </main>

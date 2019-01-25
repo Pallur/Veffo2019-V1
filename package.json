@@ -16,5 +16,8 @@
     "nodemon": "^1.18.9"
   },
   "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "jsdom": "^13.2.0"
   }
 }
