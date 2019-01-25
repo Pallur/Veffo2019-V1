@@ -16,12 +16,13 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 function notFoundHandler(req, res, next) {
-  res.status(404).send('404 Not Found');
+  //res.status(404).send('404 Not Found');
+  res.render('error', { title: '404 Fannst ekki', error: 'Síða fannst ekki' });
 }
 
 function errorHandler(err, req, res, next) {
-  console.error(err);
-  res.status(500).send('Villa!');
+  //res.status(500).send('Villa!');
+  res.render('error', { title: 'Villa kom upp', error: 'Server niðri' });
 }
 
 app.use(notFoundHandler);

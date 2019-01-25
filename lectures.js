@@ -9,16 +9,12 @@ const router = express.Router();
 // lesa lectures.json skrá
 async function readJson() {
   const file = await readFileAsync('./lectures.json');
-
   const json = JSON.parse(file);
-  console.log("json skra");
-
   return json
 }
 
 // catch them errors
 function catchErrors(fn) {
-  console.error("hello er error i lecture.js");
   return (req, res, next) => fn(req, res, next).catch(next);
 }
 
@@ -46,10 +42,8 @@ async function lecture(req, res, next) {
 
   // Hér tengjum item.js skrána við og skilum niðurstöðunni úr því inn í html.
   const html = content.createContent(foundContent.content);
-  res.render('lecture', {
-    title, html, category, lecture: foundContent,
+  res.render('lecture', { title, html, category, lecture: foundContent,
   });
-
 }
 
 router.get('/', catchErrors(list));
